@@ -1,5 +1,5 @@
 /* base keyboard class */
-class JTechKeyboard {
+class TSCanvasKeyboard {
     pressedKeys: object;
 
     /* static list of all the keys and their keyCodes */

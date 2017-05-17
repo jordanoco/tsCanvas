@@ -1,5 +1,5 @@
 /* base mouse class */
-class JTechMouse {
+class TSCanvasMouse {
     canvas: HTMLCanvasElement;
     mousePosition: object;
     mouseState: Array<boolean>;

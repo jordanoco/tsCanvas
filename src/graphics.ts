@@ -1,5 +1,5 @@
 /* base graphics class */
-class JTechGraphics {
+class TSCanvasGraphics {
     canvas: HTMLCanvasElement;
     context: CanvasRenderingContext2D;
     graphics_width: number;
