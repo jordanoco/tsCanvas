@@ -32,7 +32,7 @@ class TSCanvasKeyboard {
         if (e.keyCode == 9) 
             e.preventDefault();
         this.pressedKeys[e.keyCode] = true;
-        this.keyDown(JTechKeyboard.toKeyChar(e.keyCode));
+        this.keyDown(TSCanvasKeyboard.toKeyChar(e.keyCode));
         return false;
     });
 
@@ -40,22 +40,22 @@ class TSCanvasKeyboard {
         if (e.keyCode == 9) 
             e.preventDefault();
         delete this.pressedKeys[e.keyCode];
-        this.keyUp(JTechKeyboard.toKeyChar(e.keyCode));
+        this.keyUp(TSCanvasKeyboard.toKeyChar(e.keyCode));
         return false
     });
   }
 
   isDown = (key: string): boolean => {
-      return (JTechKeyboard.toKeyCode(key) in this.pressedKeys);
+      return (TSCanvasKeyboard.toKeyCode(key) in this.pressedKeys);
   }
 
   static toKeyCode = (char: string): number => {
-      return JTechKeyboard.keys[char];
+      return TSCanvasKeyboard.keys[char];
   }
 
   static toKeyChar = (keyCode: number): string => {
-      for (let char in JTechKeyboard.keys) {
-        if (JTechKeyboard.keys[char] == keyCode)
+      for (let char in TSCanvasKeyboard.keys) {
+        if (TSCanvasKeyboard.keys[char] == keyCode)
             return char;
       }
   }

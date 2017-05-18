@@ -1,3 +1,13 @@
+/* image class */
+class TSCanvasImage {
+    img: HTMLImageElement;
+
+    constructor (url: string) {
+        this.img = new Image();
+        this.img.src = url;
+    }
+}
+
 /* base graphics class */
 class TSCanvasGraphics {
     canvas: HTMLCanvasElement;
@@ -31,6 +41,11 @@ class TSCanvasGraphics {
     /* sets the font to use in draw calls */
     setFont = (font: string, size: number): void => {
         this.context.font = size + 'px' + font;
+    }
+
+    /* draws an image */
+    draw = (image: TSCanvasImage, x: number, y: number): void => {
+        this.context.drawImage(image.img, x, y);
     }
 
     /* draws text to the screen */
