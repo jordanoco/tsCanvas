@@ -2,7 +2,7 @@
     "compilerOptions": {
         "target":"es3",
         "outDir": "build",
-        "removeComments": false,
+        "removeComments": true,
         "rootDir": "src"
     }
 }

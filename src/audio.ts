@@ -1,8 +1,14 @@
-/* sound class */
+/**
+ * Represents a sound to be played
+ * @constructor
+ * @param {string} url the url to get the sound from
+ */
 class TSCanvasAudio {
     source: HTMLAudioElement;
 
-    /* overrideable function, called when the playback ends */
+    /**
+     * Fired when the sound finishes playing
+     */
     ended = (): void => {};
 
     constructor (url: string) {
@@ -13,17 +19,24 @@ class TSCanvasAudio {
         });
     }
 
-    /* starts the playback of the sound */
+    /**
+     * Starts playing the sound
+     */
     play = (): void => {
         this.source.play();
     }
 
-    /* pauses the audio where it is */
+    /**
+     * Pauses the sound
+     */
     pause = (): void => {
         this.source.pause();
     }
 
-    /* change the volume of the playback */
+    /**
+     * Sets the volume to play the sound at
+     * @param {number} volume the volume of the sound from 0 to 100
+     */
     setVolume = (vol: number): void => {
         this.source.volume = vol/100;
     }

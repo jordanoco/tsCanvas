@@ -1,4 +1,7 @@
-/* base keyboard class */
+/**
+ * Handles keyboard input
+ * @constructor
+ */
 class TSCanvasKeyboard {
     pressedKeys: object;
 
@@ -23,8 +26,16 @@ class TSCanvasKeyboard {
         "f11": 122, "f12": 123, "tab": 9, "del": 46
   }
 
-  /* overridable functions */
+  /**
+   * Called when a key is pressed down, you need to define what it does
+   * @param {string} key the key that was pressed
+   */
   keyDown = (key: string): void => {};
+
+  /**
+   * Called when a key is released, you need to define what it does
+   * @param {string} key the key that was released
+   */
   keyUp = (key: string): void => {};
 
   constructor(){

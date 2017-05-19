@@ -1,12 +1,43 @@
-/* base mouse class */
+/**
+* Handles mouse input
+* @constructor
+* @param {HTMLCanvasElement} canvas the canvas this watches in
+*/
 class TSCanvasMouse {
-    canvas: HTMLCanvasElement;
-    mousePosition: object;
-    mouseState: Array<boolean>;
+    private canvas: HTMLCanvasElement;
+    private mousePosition: object;
+    private mouseState: Array<boolean>;
 
-    /* these functions are overridable by the end user */
+    /**
+     * Called when the user clicks
+     * @param {number} x the x position of the click
+     * @param {number} y the y position of the click
+     * @param {button} number the button pressed, 1 for left, 2 for right, 3 for middle
+     */
     onClick = (x: number, y: number, button: number) => {};
+
+    /**
+     * Called when the user scrolls in the canvas
+     * @param {number} vel the velocity of the scrolling
+     */
     onScroll = (vel: number) => {};
+
+    /**
+     * Gets the postion of the mouse
+     * @return {object} the position of the mouse
+     */
+    getPosition = (): object => {
+        return this.mousePosition;
+    }
+
+    /**
+     * Returns the state of one of the buttons
+     * @param {number} button the button to check, 1 for left, 2 for right, 3 for middle
+     * @return {boolean} the state of the button, true for pressed, false otherwise
+     */
+     getButtonState = (button: number): boolean => {
+        return this.mouseState[button];
+     }
 
     constructor (canvas: HTMLCanvasElement){
         this.canvas = canvas;
