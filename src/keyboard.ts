@@ -2,7 +2,7 @@
  * Handles keyboard input
  * @constructor
  */
-class TSCanvasKeyboard {
+export class TSCanvasKeyboard {
     pressedKeys: object;
 
     /* static list of all the keys and their keyCodes */

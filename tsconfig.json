@@ -1,8 +1,13 @@
 {
     "compilerOptions": {
+        "module": "amd",
         "target":"es3",
         "outDir": "build",
         "removeComments": true,
-        "rootDir": "src"
-    }
+        "rootDir": "src",
+        "outFile": "./build/tscanvas.js"
+    },
+    "include": [
+        "./src/*.ts"
+    ]
 }

@@ -3,7 +3,7 @@
 * @constructor
 * @param {HTMLCanvasElement} canvas the canvas this watches in
 */
-class TSCanvasMouse {
+export class TSCanvasMouse {
     private canvas: HTMLCanvasElement;
     private mousePosition: object;
     private mouseState: Array<boolean>;

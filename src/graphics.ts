@@ -3,7 +3,7 @@
  * @constructor
  * @param {string} url
  */
-class TSCanvasImage {
+export class TSCanvasImage {
     img: HTMLImageElement;
 
     constructor (url: string) {
@@ -17,7 +17,7 @@ class TSCanvasImage {
  * @constructor
  * @param {HTMLCanvasElement} canvas
  */
-class TSCanvasGraphics {
+export class TSCanvasGraphics {
     canvas: HTMLCanvasElement;
     context: CanvasRenderingContext2D;
     graphics_width: number;

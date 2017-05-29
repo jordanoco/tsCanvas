@@ -3,7 +3,7 @@
  * @constructor
  * @param {string} url the url to get the sound from
  */
-class TSCanvasAudio {
+export class TSCanvasAudio {
     source: HTMLAudioElement;
 
     /**

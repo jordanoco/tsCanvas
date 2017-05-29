@@ -5,7 +5,7 @@
  * @param {string} value the value the cookie holds
  * @param {number} lifetime the time (in days) the cookie is valid for
  */
-class TSCanvasCookie {
+export class TSCanvasCookie {
     name: string;
     value: string;
     lifetime: number;
@@ -20,7 +20,7 @@ class TSCanvasCookie {
 /**
  * Manages cookies, all methods are static
  */
-class TSCanvasCookieManager {
+export class TSCanvasCookieManager {
 
     /**
      * Gets the cookie with a given name, undefined if it doesn't exist
