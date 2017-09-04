@@ -35,7 +35,7 @@ export class TSCanvasMouse {
      * @param {number} button the button to check, 1 for left, 2 for right, 3 for middle
      * @return {boolean} the state of the button, true for pressed, false otherwise
      */
-     getButtonState = (button: number): boolean => {
+     isPressed = (button: number): boolean => {
         return this.mouseState[button];
      }
 

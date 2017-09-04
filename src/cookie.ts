@@ -1,4 +1,4 @@
-/**
+ /**
  * Represents a cookie
  * @constructor
  * @param {string} name the name of the cookie

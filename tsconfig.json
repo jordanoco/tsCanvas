@@ -3,7 +3,7 @@
         "module": "amd",
         "target":"es3",
         "outDir": "build",
-        "removeComments": true,
+        "removeComments": false,
         "rootDir": "src",
         "outFile": "./build/tscanvas.js"
     },
